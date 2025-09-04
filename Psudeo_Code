@@ -1,2 +1,40 @@
-lalalallalal
-code stuff
+ACTIVITY 1
+______________________________
+
+variable = user_input 
+variable = new_output
+
+start loop
+  ( print: prompt user to input word or phrase
+
+    use loop to check through each letter
+      (
+        IF ASCII is between 97-122, THEN subtract 32. assign to variable NewOutput
+        ELSE Print: please use only lower case letters.
+      )
+end Loop
+
+Print: NewOutput
+
+______________________________
+ACTIVITY 2
+______________________________
+
+variable = nums
+variable = sum
+variable (boolean) = user_input
+
+start loop
+  ( Print: prompt user to give you a number- stored in nums
+  Check to make sure num is an integer, if not Print: "Please input a whole number."
+
+    if user_input = true, then get another number, if false, continue to next loop
+    ( add all nums together, assign to sums )
+end loop
+
+Print: sum
+
+______________________________
+ACTIVITY 3
+______________________________
+ 
