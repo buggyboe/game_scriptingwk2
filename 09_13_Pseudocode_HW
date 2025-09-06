@@ -19,6 +19,12 @@ variable = user_guess
 variable (boolean) = user_choice
 variable = counter
 
+for loop starts (repeat 7 times if rand /= user_guess)
+(
+     set up random generator from 1-100 (intgers only) and store in variable rand
+     print "Pick a random whole number between 1-100"
+)
+
 need a random generator from 1-100
 user needs to input number between 1-100. needs to be checked to make sure its the correct value
 loop needs to repeat 7 times unless user wins. if 7 attempts are reached, game is lost
@@ -29,17 +35,6 @@ user should be able to repeat
 
 
 
-    
-
-
-
-
-
-
-
-
-
-
-
 
     
+
