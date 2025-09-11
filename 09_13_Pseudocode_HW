@@ -1,37 +1,27 @@
-REQUIREMENTS
-
-Start with the game loop to create this simple game.
-
-Here are the minimum requirements for your game:
-
-*Computer picks a number from 1 to 100.
-*User tries to guess the computer number.
-*User is allowed a certain number of attempts (7)
-*If user guesses correctly, user wins.
-If user does not guess correctly within the allowed number of attempts, user loses.
-Print a winning or losing message after each game.
-Allow the user to replay as many times as they want.
-
-________________________________________________________________
-
 variable = rand
 variable = user_guess
 variable (boolean) = user_choice
 variable = counter
 
-for loop starts (repeat 7 times if rand /= user_guess)
+loop (if user_guess = int) 
 (
-     set up random generator from 1-100 (intgers only) and store in variable rand
-     print "Pick a random whole number between 1-100"
+ set up random generator from 1-100 (intgers only) and store in variable rand
+ print "Pick a random whole number between 1-100" assign this value to user_guess
+      
+     for loop ( repeat 7 times if user_guess /= rand)
+          ( 
+           set up a counter for this loop and assign to variable "counter"
+           print "that is incorrect! please try again. you have (counter) number of tries left."
+          )
+
+IF for loop ends and user_guess /= rand, print "You lost. Try again?" assign to variable user_choice
+
+ELSE print "that is correct! would you like to play again?" assgign to variable user_choice
+    
+     IF user_choice is true, repeat loop
+     ELSE break loop 
 )
-
-need a random generator from 1-100
-user needs to input number between 1-100. needs to be checked to make sure its the correct value
-loop needs to repeat 7 times unless user wins. if 7 attempts are reached, game is lost
-if user input is equal to number chosen by random generator, win is triggered. 
-
-win/lose needs to reprint each time
-user should be able to repeat 
+end loop
 
 
 
