@@ -1,1 +1,30 @@
+local rand = math.random(1, 100)
 
+local user_guess = 0
+
+local user_continue = 'Y'
+
+local counter = 0
+
+
+while (user_continue ~= 'N' ) do
+  print("Please guess a number 1-100.")
+  user_guess = io.read()
+
+while counter < 7 do
+    if user_guess == rand then
+      print("That is correct!")
+      counter = counter + 1
+      print ("You have " .. counter "attempts left.")
+    else
+      print("That is incorrect.")
+      counter = counter + 1
+      print ("You have " .. counter "attempts left.")
+    end
+  end
+
+  print("Would you like to try again? Y/N")
+  user_continue =  string.upper(io.read())
+end
+
+print("The correct number was: " .. rand)
