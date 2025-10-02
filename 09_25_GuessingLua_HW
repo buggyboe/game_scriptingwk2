@@ -6,25 +6,21 @@ local user_continue = 'Y'
 
 local counter = 0
 
-
-while (user_continue ~= 'N' ) do
+while (user_continue ~= 'N') do
   print("Please guess a number 1-100.")
   user_guess = io.read()
 
-while counter < 7 do
-    if user_guess == rand then
-      print("That is correct!")
-      counter = counter + 1
-      print ("You have " .. counter "attempts left.")
-    else
-      print("That is incorrect.")
-      counter = counter + 1
-      print ("You have " .. counter "attempts left.")
-    end
-  end
+    while counter ~= 7 and user_guess ~= rand do
+      print("That is incorrect! please try again. You have" .. counter == counter+1 .. "number of tries left.")
+    end 
+  
+  if user_guess ~= rand then
+    print("You lost. The correct number was ".. rand.." Would you like to try again? Y/N")
+    user_continue = string.upper(io.read())
 
-  print("Would you like to try again? Y/N")
-  user_continue =  string.upper(io.read())
+  else 
+    print("You won!Would you like to try again? Y/N")
+    user_continue = string.upper(io.read())
+  end
 end
 
-print("The correct number was: " .. rand)
